@@ -23,7 +23,7 @@ class ArPhpLaravelServiceProvider extends ServiceProvider
     {
         // Register the main class to use with the facade
         $this->app->singleton(ArPhpLaravel::class, function () {
-            return new ArPhpLaravel();
+            return new ArPhpLaravel;
         });
 
         /**

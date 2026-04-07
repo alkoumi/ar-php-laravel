@@ -2,11 +2,13 @@
 
 namespace StillCode\ArPhpLaravel;
 
+use ArPHP\I18N\Arabic;
+
 class ArPhpLaravel
 {
-    private static function Arabic(): \ArPHP\I18N\Arabic
+    private static function Arabic(): Arabic
     {
-        return new \ArPHP\I18N\Arabic();
+        return new Arabic;
     }
 
     public static function isArabic(string $text): bool
