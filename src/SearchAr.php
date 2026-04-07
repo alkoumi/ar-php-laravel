@@ -4,7 +4,7 @@ namespace StillCode\ArPhpLaravel;
 
 trait SearchAr
 {
-    public function scopeSearchAr($query, $field, $search)
+    public function scopeSearchAr(mixed $query, string $field, string $search): mixed
     {
         $Arabic = new \ArPHP\I18N\Arabic();
         $Arabic->setQueryStrFields($field);

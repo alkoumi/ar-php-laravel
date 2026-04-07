@@ -4,7 +4,7 @@ namespace StillCode\ArPhpLaravel;
 
 class Macroables
 {
-    public static function setSearchWheres($query, $search, $field, $mode = 'OR')
+    public static function setSearchWheres(mixed $query, string $search, string $field, string $mode = 'OR'): mixed
     {
         $Arabic = new \ArPHP\I18N\Arabic();
         $Arabic->setQueryStrFields($field);
@@ -15,7 +15,7 @@ class Macroables
         return $query->whereRaw($strCondition);
     }
 
-    public static function setSearchOrder($query, $search, $field)
+    public static function setSearchOrder(mixed $query, string $search, string $field): mixed
     {
         $Arabic = new \ArPHP\I18N\Arabic();
         $Arabic->setQueryStrFields($field);
